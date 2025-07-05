@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/OussemaSpike/wassim-chargui-config-prop
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
+
+
+
+server:
+  port: 8888
