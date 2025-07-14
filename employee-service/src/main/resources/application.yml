@@ -5,3 +5,19 @@ spring:
     name: employee-service
   config:
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
+
+
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /docs
+    operationsSorter: method
+    display-request-duration: true
+    oauth:
+      client-id: test-client
+      client-secret: DgFnqRIl1Eo40cBD0jJIQYMBQxYmPRCm
+      scopes: openid profile
+    oauth2-redirect-url: http://localhost:8082/swagger-ui/oauth2-redirect.html
+  default-produces-media-type: application/json
